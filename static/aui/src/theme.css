@@ -1,0 +1,83 @@
+/*
+    Adapt UI
+
+    Copyright (C) LiveG. All Rights Reserved.
+
+    https://liveg.tech
+    Licensed by the LiveG Open-Source Licence, which can be found at LICENCE.md.
+*/
+
+:root {
+    --primaryHue: 220;
+    --primarySaturation: 90%;
+    --primaryLightness: 65%;
+    --secondaryHue: var(--primaryHue);
+    --secondarySaturation: 85%;
+    --secondaryLightness: 80%;
+    --dangerousHue: 0;
+    --dangerousSaturation: 65%;
+    --dangerousLightness: 65%;
+    --dark-primaryHue: var(--primaryHue);
+    --dark-primarySaturation: var(--primarySaturation);
+    --dark-primaryLightness: var(--primaryLightness);
+    --dark-secondaryHue: var(--secondaryHue);
+    --dark-secondarySaturation: calc(var(--secondarySaturation) - 40%);
+    --dark-secondaryLightness: calc(var(--secondaryLightness) - 40%);
+    --dark-dangerousHue: 0;
+    --dark-dangerousSaturation: 65%;
+    --dark-dangerousLightness: 65%;
+    --primaryBackground: rgb(255, 255, 255);
+    --primaryText: rgb(0, 0, 0);
+    --primaryUI: hsl(var(--primaryHue), var(--primarySaturation), var(--primaryLightness));
+    --primaryUIText: rgb(255, 255, 255);
+    --primaryUIPress: hsl(var(--primaryHue), calc(var(--primarySaturation) - 10%), calc(var(--primaryLightness) + 5%));
+    --primaryExtra: rgba(0, 0, 0, 0.5);
+    --primaryPress: rgba(0, 0, 0, 0.2);
+    --primarySelected: rgba(0, 0, 0, 0.1);
+    --secondaryBackground: rgb(229, 229, 229);
+    --secondaryText: rgb(0, 0, 0);
+    --secondaryUI: hsl(var(--secondaryHue), var(--secondarySaturation), var(--secondaryLightness));
+    --secondaryUIText: rgb(255, 255, 255);
+    --secondaryUIPress: hsl(var(--secondaryHue), calc(var(--secondarySaturation) - 10%), calc(var(--secondaryLightness) + 5%));
+    --secondaryExtra: rgba(0, 0, 0, 0.5);
+    --secondaryPress: rgba(0, 0, 0, 0.2);
+    --secondarySelected: rgba(0, 0, 0, 0.1);
+    --dangerousUI: hsl(var(--dangerousHue), var(--dangerousSaturation), var(--dangerousLightness));
+    --dangerousUIText: rgb(255, 255, 255);
+    --dangerousUIPress: hsl(var(--dangerousHue), calc(var(--dangerousSaturation) - 10%), calc(var(--dangerousLightness) + 5%));
+    --scrollbar: rgba(0, 0, 0, 0.5);
+    --scrollbarHover: rgba(0, 0, 0, 0.6);
+    --scrollbarPress: rgba(0, 0, 0, 0.8);
+    --menuOutline: rgba(255, 255, 255, 0.5);
+    --blur: rgba(0, 0, 0, 0.5);
+    --skeleton: rgba(0, 0, 0, 0.1);
+    --codeBackground: rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --primaryBackground: rgb(33, 33, 33);
+        --primaryText: rgb(255, 255, 255);
+        --primaryUI: hsl(var(--dark-primaryHue), var(--dark-primarySaturation), var(--dark-primaryLightness));
+        --primaryUIPress: hsl(var(--dark-primaryHue), calc(var(--dark-primarySaturation) - 10%), calc(var(--dark-primaryLightness) - 5%));
+        --primaryExtra: rgba(255, 255, 255, 0.5);
+        --primaryPress: rgba(255, 255, 255, 0.2);
+        --primarySelected: rgba(255, 255, 255, 0.1);
+        --secondaryBackground: rgb(77, 77, 77);
+        --secondaryText: rgb(255, 255, 255);
+        --secondaryUI: hsl(var(--dark-secondaryHue), var(--dark-secondarySaturation), var(--dark-secondaryLightness));
+        --secondaryUIPress: hsl(var(--dark-secondaryHue), calc(var(--dark-secondarySaturation) - 10%), calc(var(--dark-secondaryLightness) - 5%));
+        --secondaryExtra: rgba(255, 255, 255, 0.5);
+        --secondaryPress: rgba(255, 255, 255, 0.2);
+        --secondarySelected: rgba(255, 255, 255, 0.1);
+        --dangerousUI: hsl(var(--dark-dangerousHue), var(--dark-dangerousSaturation), var(--dark-dangerousLightness));
+        --dangerousUIText: rgb(255, 255, 255);
+        --dangerousUIPress: hsl(var(--dangerousHue), calc(var(--dangerousSaturation) - 5%), calc(var(--dangerousLightness) - 5%));
+        --scrollbar: rgba(255, 255, 255, 0.5);
+        --scrollbarHover: rgba(255, 255, 255, 0.6);
+        --scrollbarPress: rgba(255, 255, 255, 0.8);
+        --menuOutline: rgba(0, 0, 0, 0.5);
+        --skeleton: rgba(255, 255, 255, 0.1);
+        --codeBackground: rgba(255, 255, 255, 0.1);
+    }
+}

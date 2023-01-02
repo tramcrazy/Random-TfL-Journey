@@ -1,0 +1,32 @@
+/*
+    Adapt UI
+
+    Copyright (C) LiveG. All Rights Reserved.
+
+    https://liveg.tech
+    Licensed by the LiveG Open-Source Licence, which can be found at LICENCE.md.
+*/
+
+img[aui-icon~="dark"] {
+    filter: contrast(0) brightness(0);
+}
+
+img[aui-icon~="light"] {
+    filter: contrast(0) brightness(10);
+}
+
+[dir="rtl"] img[aui-icon][src$="/back.svg"],
+[dir="rtl"] img[aui-icon][src$="/forward.svg"]
+{
+    transform: rotateZ(180deg);
+}
+
+@media (prefers-color-scheme: dark) {
+    img[aui-icon~="dark"][aui-icon~="embedded"] {
+        filter: contrast(0) brightness(10);
+    }
+    
+    img[aui-icon~="light"][aui-icon~="embedded"] {
+        filter: contrast(0) brightness(0);
+    }
+}

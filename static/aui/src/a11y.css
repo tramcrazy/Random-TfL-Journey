@@ -1,0 +1,33 @@
+/*
+    Adapt UI
+
+    Copyright (C) LiveG. All Rights Reserved.
+
+    https://liveg.tech
+    Licensed by the LiveG Open-Source Licence, which can be found at LICENCE.md.
+*/
+
+/*
+    This code improves accessibility support for Adapt UI, which allows for
+    adaptive focus outlines.
+*/
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="range"]):focus-visible {
+    outline: none;
+}
+
+[aria-role="group"] {
+    border-radius: 0.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        transition: none!important;
+        animation: none!important;
+    }
+
+    *::backdrop {
+        transition: none!important;
+        animation: none!important;
+    }
+}

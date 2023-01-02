@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Random Journey Planner</title>
+        <script src="{{ url_for('static', filename='script.js') }}" type="text/javascript"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='aui/src/adaptui.css') }}">
+    </head>
+    <body>
+        <aui-screen id="mainscreen">
+            <header>
+                <span>Random Journey Planner</span>
+            </header>
+            <main>
+                <section>
+                    <h1>Random TfL Journey Planner</h1>
+                    <form>
+                        <button onclick="generate_journey()" type="button" id="genbutton">Generate Journey</button>
+                    </form><br><br>
+                    <aui-card id="output">Journey will appear here...</aui-card>
+                </section>
+            </main>
+        </aui-screen>
+    </body>
+</html>
