@@ -8,6 +8,7 @@ from flask import Flask, render_template, url_for
 
 appKey = os.environ.get("TFL_API_KEY")
 app = Flask(__name__)
+fn = os.path.join(os.path.dirname(__file__), 'allstops.txt')
 
 def travelRoute(startpoint, endpoint):
     # try/except block for error handling
@@ -42,7 +43,7 @@ def travelRoute(startpoint, endpoint):
     except TypeError as e:
         print("Error (TypeError)! Please try again!")
     return output
-allstops = open("c:\\Users\\jonat\\OneDrive\\Documents\\allstops.txt", "r")
+allstops = open(fn, "r")
 allstopsdata = allstops.read().splitlines()
 
 @app.route("/")
